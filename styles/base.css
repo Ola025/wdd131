@@ -127,3 +127,21 @@ figcaption {
   text-decoration: underline;
   color: #003399; 
 }
+
+
+footer {
+  background-color: #133e7c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer span {
+  color: #ffdd57;
+}
+
+
+#lastModified {
+  color:#FFD700; /* bright gold */
+}
