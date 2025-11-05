@@ -1,8 +1,7 @@
-// Footer Date Script
-const yearSpan = document.querySelector("#year");
-const lastModifiedSpan = document.querySelector("#lastModified");
+// Display current year
+document.getElementById("year").textContent = new Date().getFullYear();
 
-const today = new Date();
-yearSpan.textContent = today.getFullYear();
-
-lastModifiedSpan.textContent = document.lastModified;
+// Display last modification date
+const lastModified = new Date(document.lastModified);
+document.getElementById("lastModified").textContent =
+  "Last Modification: " + lastModified.toLocaleString();

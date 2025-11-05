@@ -130,18 +130,23 @@ figcaption {
 
 
 footer {
-  background-color: #133e7c;
+  background-color: #1e4d70;  /* deep blue background */
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+}
+
+footer p {
+  margin: 5px 0;
 }
 
 footer span {
-  color: #ffdd57;
+  color: gold; /* makes the year and modification date gold */
 }
 
-
-#lastModified {
-  color:#FFD700; /* bright gold */
+footer p:nth-child(2) {
+  color: #f5d142; /* bright gold text for last modified */
 }
