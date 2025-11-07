@@ -1,0 +1,86 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+header {
+  background-color: #4b007d;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+#menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #4b007d;
+}
+
+#nav-menu a {
+  color: white;
+  padding: 0.75rem;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+#nav-menu a:hover {
+  background-color: #7030a0;
+}
+
+main {
+  text-align: center;
+  padding: 1rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+figure {
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+figure img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+figcaption {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #4b007d;
+}
+
+footer {
+  background-color: #4b007d;
+  color: gold;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+}
