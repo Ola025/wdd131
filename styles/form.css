@@ -1,0 +1,89 @@
+:root{
+  --purple:#2d0036;
+  --lav:#e6dfe8;
+  --muted:#555;
+  --card:#fff;
+  --accent:#7b2cbf;
+  --radius:8px;
+  --gap:12px;
+  font-family: system-ui, 'Poppins', Arial, sans-serif;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#f7f3fb 0%, #fff 100%);
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+}
+
+.site-header{
+  background:var(--purple);
+  color:#fff;
+  padding:14px 0;
+  text-align:center;
+}
+.site-header h1{margin:0;font-size:1.2rem;font-weight:700}
+
+.wrap{max-width:520px;margin:18px auto;padding:0 14px}
+
+.main{margin-bottom:18px}
+
+/* card & fields */
+.card, form{background:var(--lav);border-radius:10px;padding:12px;box-shadow:0 4px 8px rgba(0,0,0,0.03)}
+.field{margin-bottom:12px}
+label{display:block;margin-bottom:6px;font-weight:600}
+.required{color:#b62ea0;margin-left:6px}
+
+select, input[type="text"], input[type="date"], textarea{
+  width:100%;
+  padding:8px 10px;
+  border:1px solid #d0c6d6;
+  border-radius:6px;
+  background:#fff;
+  font-size:0.95rem;
+}
+textarea{resize:vertical}
+
+.rating-row{display:flex;gap:8px;flex-wrap:wrap}
+.rating-row label{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.rating-row input{width:16px;height:16px}
+
+/* action button */
+.actions{margin-top:8px;text-align:center}
+.btn{
+  display:inline-block;
+  background:var(--purple);
+  color:white;
+  padding:10px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  border:0;
+  font-weight:700;
+}
+
+/* confirm card */
+.card.confirm{padding:18px;text-align:center}
+.card.confirm h2{margin-top:0}
+
+/* small helpers */
+.counter{margin-top:12px;font-size:0.95rem;color:var(--muted)}
+
+/* footer */
+.site-footer{
+  background:var(--purple);
+  color:#fff;
+  padding:16px 0;
+  text-align:center;
+}
+.site-footer p{margin:4px 0;font-size:0.9rem}
+
+/* larger screens */
+@media (min-width:900px){
+  .wrap{max-width:920px}
+  body{background:#f6f5f9}
+  .site-header h1{font-size:1.4rem}
+  form, .card{padding:20px}
+}
