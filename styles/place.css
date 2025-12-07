@@ -1,0 +1,115 @@
+/* student-level styles for place page */
+:root{
+  --brand-red: #c62828;
+  --accent-green: #0b6b3a;
+  --bg: #eefae9;
+  --card-bg: #ffffff;
+  --max-width: 1100px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color:#111;
+}
+
+/* header */
+.site-header{
+  background: var(--brand-red);
+  color: white;
+  padding: 1rem 0;
+  text-align:center;
+}
+.site-title{ margin:0; font-size:1.6rem; font-weight:700; }
+
+/* hero (full-width centered content column) */
+.hero{
+  max-width: var(--max-width);
+  margin: 1rem auto 0;
+  border-top: 8px solid var(--accent-green);
+  overflow: hidden;
+  border-radius: 4px;
+}
+.hero img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+}
+
+/* content area */
+.content-grid{
+  max-width: var(--max-width);
+  margin: 0.8rem auto 2rem;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr; /* mobile stacked */
+  gap: 1rem;
+}
+
+/* cards */
+.card{
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.data-card h2, .weather-card h2{
+  margin-top:0; text-align:center;
+}
+
+/* data list */
+.data-card ul{
+  list-style:none; padding:0; margin:0;
+  max-width:540px;
+  margin-left:auto; margin-right:auto;
+}
+.data-card li{ padding:6px 0; display:flex; justify-content:space-between; color:#222; }
+.data-card li strong{ width:45%; color:#333; font-weight:600; }
+
+/* weather */
+.weather-list{ list-style:none; padding:0; margin:0; text-align:left; }
+.weather-list li{ padding:6px 0; display:flex; justify-content:space-between; }
+.svg-wrap{ text-align:center; margin-bottom:8px; }
+
+/* footer */
+.site-footer{
+  background: var(--brand-red);
+  color: white;
+  text-align:center;
+  padding: 12px 8px;
+}
+
+/* desktop/wider view layout */
+@media (min-width: 900px){
+  .content-grid{
+    grid-template-columns: 320px 1fr 260px; /* left overlay, center main, right overlay */
+    align-items:start;
+  }
+
+  /* visually make data and weather look like overlay boxes (positioned on top of hero area when desired) */
+  .data-card{
+    margin-top:-180px;
+    margin-left: 20px;
+    width:260px;
+  }
+
+  .weather-card{
+    margin-top:-180px;
+    margin-right: 20px;
+    width:220px;
+    justify-self:end;
+  }
+
+  /* hide inline svg in desktop if we want the emoticon via pseudo later */
+  .svg-wrap{ display:none; }
+
+  /* add emoji emoticon after weather heading in wide view */
+  .weather-card h2::after{
+    content: " ⛅";
+    font-size:1.1rem;
+    margin-left:8px;
+  }
+}

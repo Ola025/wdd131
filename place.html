@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nigeria — Zuma Rock (Place Page)</title>
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">Nigeria — Zuma Rock</h1>
+    </div>
+  </header>
+
+  <main class="site-main">
+
+    <!-- HERO: your uploaded image -->
+    <section class="hero">
+      <picture>
+        <!-- wide / desktop -->
+        <source srcset="images/zuma-rock.webp" media="(min-width:1800px)">
+        <!-- tablet -->
+        <source srcset="images/zuma-rock.webp" media="(min-width:1000px)">
+        <!-- mobile fallback -->
+        <img src="images/zuma-rock.jpg"
+             alt="Zuma Rock, Nigeria" width="1800" height="1200">
+      </picture>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="content-grid">
+
+      <article class="card data-card" aria-labelledby="data-heading">
+        <h2 id="data-heading">Data</h2>
+        <ul>
+          <li><strong>Place:</strong>Zuma Rock (near Abuja)</li>
+          <li><strong>State:</strong>Niger State</li>
+          <li><strong>Country:</strong>Nigeria</li>
+          <li><strong>Coordinates:</strong>~9.268°N,7.186°E</li>
+          <li><strong>Famous for:</strong>Massive monolith rock face</li>
+        </ul>
+      </article>
+
+      <aside class="card weather-card" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Weather</h2>
+
+        <ul class="weather-list">
+          <li><span class="label">Temperature:</span> <span id="temp">30</span>°C</li>
+          <li><span class="label">Wind Speed:</span> <span id="wind">12</span>km/h</li>
+          <li><span class="label">Wind Chill:</span> <strong id="windchill">--</strong></li>
+          <li><span class="label">Condition:</span> Partly cloudy</li>
+        </ul>
+      </aside>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="currentYear"></span> Odukoya Olaleye Moses | Nigeria</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
