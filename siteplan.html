@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site Plan — Zuma Rock / Nigeria — Odukoya Olaleye Moses</title>
+  <meta name="author" content="Odukoya Olaleye Moses" />
+  <meta name="description" content="Site plan for a small project page about Zuma Rock, Nigeria. Student-level plan for WDD131." />
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* student-level styles: Nigeria green + gold */
+    :root{
+      --green:#008753;    /* Nigeria green */
+      --gold:#d4af37;     /* gold accent */
+      --bg:#f4fbf6;
+      --card:#ffffff;
+      --muted:#305044;
+      --max:980px;
+      --pad:16px;
+      --radius:10px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background:var(--bg);
+      color:var(--muted);
+      line-height:1.45;
+      padding:20px;
+    }
+    header{
+      max-width:var(--max);
+      margin:0 auto 18px;
+      background:var(--green);
+      color:#fff;
+      padding:18px;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      text-align:center;
+    }
+    header h1{ margin:0; font-family:'Merriweather', serif; font-size:1.4rem; }
+    main{ max-width:var(--max); margin:0 auto; background:var(--card); padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    h2{ color:var(--green); margin-top:14px; margin-bottom:8px; font-size:1.05rem; }
+    p.lead{ margin:6px 0 12px; color:#23372e; }
+    .row{ display:flex; gap:12px; flex-wrap:wrap; }
+    .card{ background:#fff; padding:12px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.03) }
+    .card.small{ flex:1 1 280px; }
+    .card.large{ flex:2 1 540px; }
+    ul.clean{ padding-left:1.1rem; margin:6px 0 12px }
+    .muted{ color:#56705f; font-size:0.95rem }
+    code.inline{ background:#f2f4f3; padding:2px 6px; border-radius:4px; font-family:monospace; font-size:0.95rem; }
+    .colors{ display:flex; gap:12px; margin-top:8px; flex-wrap:wrap; align-items:center; }
+    .sw{ width:84px; height:56px; border-radius:8px; display:flex; align-items:flex-end; padding:6px; color:#fff; font-weight:700; font-size:12px }
+    .sw.green{ background:var(--green) }
+    .sw.white{ background:#fff; color:#222; border:1px solid #e6e6e6; box-shadow:none }
+    .sw.gold{ background:var(--gold) }
+
+    /* wireframe sketches */
+    .wireframes{ display:flex; gap:12px; flex-direction:column; margin-top:12px }
+    .wf{ background:#eef8f0; border-radius:8px; padding:12px; border:1px dashed rgba(0,0,0,0.05) }
+    .screen{ background:linear-gradient(180deg,#fff,#f9fff9); border-radius:6px; height:280px; display:flex; align-items:flex-start; justify-content:center; padding:12px; color:var(--muted); font-weight:700 }
+    .wf .label{ font-size:0.9rem; margin-bottom:8px; color:#2e5b44 }
+
+    /* footer note */
+    footer.note{ text-align:center; margin-top:12px; color:#4a6b59; font-size:0.95rem }
+
+    @media(min-width:880px){
+      .wireframes{ flex-direction:row }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Zuma Rock — Nigeria (site plan)</h1>
+  </header>
+
+  <main>
+    <!-- Site Name -->
+    <section>
+      <h2>Site name</h2>
+      <p class="lead"><strong>Zuma Rock — Nigeria</strong> — a focused, single-page student site that highlights Zuma Rock (near Abuja). I chose this name because it directly describes the page subject and makes the purpose clear to visitors.</p>
+      <p class="muted"><strong>Files & folders (naming conventions):</strong> <span class="muted">Use lowercase, no spaces: <code class="inline">project/</code>, <code class="inline">siteplan.html</code>, <code class="inline">place.html</code>, <code class="inline">styles/place.css</code>, <code class="inline">scripts/place.js</code>, <code class="inline">images/</code>.</span></p>
+    </section>
+
+    <!-- Purpose -->
+    <section>
+      <h2>Site purpose</h2>
+      <p>
+        This site will provide basic information about Zuma Rock: location, short facts, a responsive hero image, and a small weather/data card. It demonstrates responsive HTML/CSS and simple JavaScript (dynamic footer dates and a wind-chill calculation as required by the course).
+      </p>
+    </section>
+
+    <!-- Scenarios & Primary Content -->
+    <section class="row" style="margin-top:8px;">
+      <div class="card small">
+        <h2>Scenarios</h2>
+        <ul class="clean">
+          <li>Visitor: “How do I get to Zuma Rock from Abuja and what can I expect?”</li>
+          <li>Student: “What are the basic facts (coordinates, state, and why it's famous)?”</li>
+        </ul>
+      </div>
+
+      <div class="card small">
+        <h2>Primary content</h2>
+        <ul class="clean">
+          <li>Responsive hero image (3 sizes, WebP)</li>
+          <li>Data card (capital, coordinates, short facts)</li>
+          <li>Weather card with static inputs, windchill calculation via JS</li>
+          <li>Footer with copyright year and last modified (via JS)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Color Schema -->
+    <section style="margin-top:12px;">
+      <h2>Color schema</h2>
+      <div class="colors">
+        <div class="sw green">#008753</div>
+        <div class="sw white" style="color:#222">#FFFFFF</div>
+        <div class="sw gold">#D4AF37</div>
+      </div>
+
+      <p class="muted" style="margin-top:8px;">Where used:</p>
+      <ul class="clean">
+        <li><strong>Green (#008753)</strong> — header background, accents, card headings</li>
+        <li><strong>White (#ffffff)</strong> — content card backgrounds and main page background inside the white card</li>
+        <li><strong>Gold (#D4AF37)</strong> — small accents (footer highlight, focus rings)</li>
+      </ul>
+    </section>
+
+    <!-- Typography -->
+    <section style="margin-top:12px;">
+      <h2>Typography</h2>
+      <p class="muted">Fonts chosen (Google Fonts):</p>
+      <ul class="clean">
+        <li><strong>Poppins</strong> — body text and labels (modern and readable)</li>
+        <li><strong>Merriweather</strong> — headings (title and main section headings)</li>
+      </ul>
+      <p class="muted">Usage example (CSS): <code class="inline">body { font-family: 'Poppins', sans-serif; } h1,h2{ font-family:'Merriweather', serif; }</code></p>
+    </section>
+
+    <!-- Wireframes -->
+    <section style="margin-top:12px;">
+      <h2>Wireframe sketches</h2>
+
+      <div class="wireframes">
+        <div class="wf">
+          <div class="label">Mobile view (stacked)</div>
+          <div class="screen">
+            <!-- simple text-based sketch -->
+            <div style="width:92%; text-align:left">
+              <div style="background:var(--green); color:#fff; padding:8px; border-radius:6px; text-align:center">Header / Title</div>
+              <div style="height:160px; margin-top:10px; background:#ddd; border-radius:6px; display:flex; align-items:center; justify-content:center">Hero (image)</div>
+              <div style="background:#fff; margin-top:10px; padding:8px; border-radius:6px">Data card</div>
+              <div style="background:#fff; margin-top:8px; padding:8px; border-radius:6px">Weather card</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf">
+          <div class="label">Wider view (desktop)</div>
+          <div class="screen" style="height:210px;">
+            <div style="width:94%; text-align:left">
+              <div style="background:var(--green); color:#fff; padding:10px; border-radius:6px; text-align:center">Header / Title</div>
+              <div style="display:flex; gap:10px; margin-top:10px">
+                <div style="width:220px; background:#fff; padding:8px; border-radius:6px">Data (left)</div>
+                <div style="flex:1; height:140px; background:#ddd; border-radius:6px; display:flex;align-items:center;justify-content:center">Hero (center)</div>
+                <div style="width:200px; background:#fff; padding:8px; border-radius:6px">Weather (right)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HTML outline & JS -->
+    <section style="margin-top:12px;">
+      <h2>HTML structure & JavaScript</h2>
+      <p class="muted">Student-level structure to implement (example):</p>
+      <code class="inline">
+        &lt;header&gt;site title&lt;/header&gt;
+        &lt;main&gt;
+          &lt;section class="hero"&gt;&lt;picture&gt;...&lt;/picture&gt;&lt;/section&gt;
+          &lt;section class="info-grid"&gt;
+            &lt;article class="data"&gt;&lt;/article&gt;
+            &lt;aside class="weather"&gt;&lt;/aside&gt;
+          &lt;/section&gt;
+        &lt;/main&gt;
+        &lt;footer&gt;copyright + lastModified (via JS)&lt;/footer&gt;
+      </code>
+
+      <p class="muted" style="margin-top:8px;">JavaScript notes:</p>
+      <ul class="clean">
+        <li>Use an external `scripts/place.js` file.</li>
+        <li>Set `<span class="muted">document.getElementById('currentYear').textContent = new Date().getFullYear()</span>` for copyright year.</li>
+        <li>Use `document.lastModified` and `new Date(document.lastModified).toLocaleString()` to show the last modified date (note: when testing locally file timestamps can be empty; use Live Server or GitHub Pages for accurate values).</li>
+        <li>Include a simple `calculateWindChill(tempC, windKmh)` function and only call it if `tempC <= 10 && windKmh > 4.8` (per rubric).</li>
+      </ul>
+    </section>
+
+    <!-- Testing checklist -->
+    <section style="margin-top:12px;">
+      <h2>Testing & self-checklist</h2>
+      <ul class="clean">
+        <li>Run W3C HTML validator for <code class="inline">place.html</code> (no errors).</li>
+        <li>Run CSS validator for <code class="inline">styles/place.css</code> (no errors).</li>
+        <li>Open site with Live Server and check DevTools Console (no JS errors).</li>
+        <li>Run DevTools Lighthouse (Desktop & Mobile) for Accessibility / Best Practices / SEO.</li>
+        <li>Hard reload (Empty Cache) and verify transferred bytes ≤ 500 KB (optimize images to meet this).</li>
+        <li>Check color contrast with DevTools CSS Overview or another color-contrast tool.</li>
+      </ul>
+    </section>
+
+    <footer class="note" style="margin-top:14px;">
+      <p>Prepared by <strong>Odukoya Olaleye Moses</strong> — WDD131 student site plan for Zuma Rock, Nigeria.</p>
+    </footer>
+  </main>
+</body>
+</html>
