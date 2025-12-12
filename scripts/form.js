@@ -13,7 +13,54 @@ document.addEventListener('DOMContentLoaded', () => {
       const opt = document.createElement('option');
       opt.value = p.id;        // value uses id (per typical product array)
       opt.textContent = p.name;
-      sel.appendChild(opt);
+      sel.a// scripts/form.js
+// script to populate the "product" select and handle review count in localStorage
+
+document.addEventListener('DOMContentLoaded', () => {
+  // an array of places (object + array usage)
+  const places = [
+    { id: 'zuma', name: 'Zuma Rock' },
+    { id: 'abai', name: 'Abuja city view spot' },
+    { id: 'rockloop', name: 'Rock Loop trail' }
+  ];
+
+  // populate select using template literals (only)
+  const select = document.getElementById('product');
+  if (select) {
+    places.forEach(place => {
+      const opt = document.createElement('option');
+      opt.value = place.id;
+      opt.textContent = `${place.name}`;
+      select.appendChild(opt);
+    });
+  }
+
+  // localStorage review counter
+  const COUNTER_KEY = 'zuma_review_count';
+  const countEl = document.getElementById('reviewCount');
+
+  // read current count
+  let count = parseInt(localStorage.getItem(COUNTER_KEY), 10);
+  if (isNaN(count)) count = 0;
+  if (countEl) countEl.textContent = `${count}`;
+
+  // when form is submitted, increment counter and allow navigation to references page
+  const form = document.getElementById('reviewForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      // increment counter in localStorage
+      count += 1;
+      localStorage.setItem(COUNTER_KEY, `${count}`);
+      if (countEl) countEl.textContent = `${count}`;
+
+      // For this student project we use GET and redirect to references.html (action attribute)
+      // no need to block default submit; the review count is already saved.
+      // but show a quick alert (optional)
+      // alert(`Thanks! Review submitted. Total reviews on this browser: ${count}`);
+    });
+  }
+});
+ppendChild(opt);
     });
   }
 

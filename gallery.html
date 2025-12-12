@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — Zuma Rock</title>
+  <meta name="description" content="Image gallery for Zuma Rock — student project." />
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Zuma Rock Gallery</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="form.html">Review / Contact</a>
+        <a href="references.html">References</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Photos</h2>
+      <p class="muted">Click any image to open in full size. (images are lazy-loaded.)</p>
+
+      <div class="grid">
+        <!-- use your own images; keep file names or change paths accordingly -->
+        <figure>
+          <img src="images/zuma-small.webp" alt="Zuma Rock photo 1" loading="lazy" width="600" height="400">
+          <figcaption>Zuma Rock — view 1</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/zuma-medium.webp" alt="Zuma Rock photo 2" loading="lazy" width="800" height="500">
+          <figcaption>Zuma Rock — view 2</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/zuma-large.webp" alt="Zuma Rock photo 3" loading="lazy" width="1200" height="700">
+          <figcaption>Zuma Rock — view 3</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="yearGallery"></span> Odukoya Olaleye Moses | Nigeria</p>
+    <p>Last Modified: <span id="lastModifiedGallery"></span></p>
+  </footer>
+</body>
+</html>

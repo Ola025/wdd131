@@ -3,89 +3,71 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Product Review — WDD131</title>
-  <meta name="description" content="Student product review form — WDD131" />
-  <link rel="stylesheet" href="styles/form.css">
+  <title>Review / Contact — Zuma Rock</title>
+  <meta name="description" content="Submit a short review or question about Zuma Rock — student project." />
+  <link rel="stylesheet" href="styles/style.css">
   <script src="scripts/form.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
-      <h1>Product Review</h1>
+      <h1>Leave a Review / Contact</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="form.html">Review / Contact</a>
+        <a href="reference.html">References</a>
+      </nav>
     </div>
   </header>
 
-  <main class="wrap main">
-    <form id="reviewForm" method="get" action="review.html" novalidate>
-      <fieldset class="field">
-        <label for="product">Product Name <span class="required" aria-hidden="true">*</span></label>
+  <main class="wrap">
+    <section class="card">
+      <h2>Product / Visit Review</h2>
+
+      <form id="reviewForm" method="get" action="references.html">
+        <!-- Product select (dynamic example using array in form.js) -->
+        <label for="product">Visited location</label>
         <select id="product" name="product" required>
-          <option value="" disabled selected>Choose a Product ...</option>
-          <!-- options inserted by scripts/form.js -->
+          <option value="" disabled selected>Select a place...</option>
         </select>
-      </fieldset>
 
-      <fieldset class="field">
-        <legend>Overall Rating <span class="required" aria-hidden="true">*</span></legend>
-        <div class="rating-row" role="radiogroup" aria-required="true">
-          <label><input type="radio" name="rating" value="1" required> <span class="stars">☆</span> 1</label>
-          <label><input type="radio" name="rating" value="2"> <span class="stars">☆☆</span> 2</label>
-          <label><input type="radio" name="rating" value="3"> <span class="stars">☆☆☆</span> 3</label>
-          <label><input type="radio" name="rating" value="4"> <span class="stars">☆☆☆☆</span> 4</label>
-          <label><input type="radio" name="rating" value="5"> <span class="stars">☆☆☆☆☆</span> 5</label>
+        <!-- Overall rating (1-5) -->
+        <fieldset>
+          <legend>Overall rating (required)</legend>
+          <label><input type="radio" name="rating" value="1" required> 1</label>
+          <label><input type="radio" name="rating" value="2"> 2</label>
+          <label><input type="radio" name="rating" value="3"> 3</label>
+          <label><input type="radio" name="rating" value="4"> 4</label>
+          <label><input type="radio" name="rating" value="5"> 5</label>
+        </fieldset>
+
+        <label for="visitDate">Date of visit</label>
+        <input id="visitDate" name="visitDate" type="date" required>
+
+        <label>Features you liked</label>
+        <label><input type="checkbox" name="feature" value="View"> View</label>
+        <label><input type="checkbox" name="feature" value="Photo spots"> Photo spots</label>
+        <label><input type="checkbox" name="feature" value="Accessibility"> Accessibility</label>
+
+        <label for="reviewText">Write a short review (optional)</label>
+        <textarea id="reviewText" name="reviewText" rows="4"></textarea>
+
+        <label for="visitorName">Your name (optional)</label>
+        <input id="visitorName" name="visitorName" type="text">
+
+        <div style="margin-top:10px;">
+          <input type="submit" value="Submit review">
         </div>
-      </fieldset>
+      </form>
 
-      <fieldset class="field">
-        <label for="installed">Date of Installation <span class="required" aria-hidden="true">*</span></label>
-        <input id="installed" name="installed" type="date" required>
-      </fieldset>
-
-      <fieldset class="field">
-        <legend>Which features did you find useful? <small>(Check all that apply)</small></legend>
-        <label><input type="checkbox" name="features" value="Durability"> Durability</label>
-        <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
-        <label><input type="checkbox" name="features" value="Performance"> Performance</label>
-        <label><input type="checkbox" name="features" value="Design"> Design</label>
-      </fieldset>
-
-      <fieldset class="field">
-        <label for="review">Written Review <small>(Optional)</small></label>
-        <textarea id="review" name="review" rows="5" placeholder="Write your thoughts..."></textarea>
-      </fieldset>
-
-      <fieldset class="field">
-        <label for="name">Your Name <small>(Optional)</small></label>
-        <input id="name" name="name" type="text" placeholder="Your name">
-      </fieldset>
-
-      <div class="actions">
-        <input type="submit" value="Post Review" class="btn">
-      </div>
-    </form>
+      <p class="muted">Total reviews submitted on this browser: <strong id="reviewCount">0</strong></p>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="currentYear"></span> Odukoya Olaleye Moses</p>
-    <p>Last Modification: <span id="lastModified">—</span></p>
+    <p>© <span id="yearForm"></span> Odukoya Olaleye Moses | Nigeria</p>
+    <p>Last Modified: <span id="lastModifiedForm"></span></p>
   </footer>
-
-  <script>
-    // minimal footer JS so the footer shows even if review.js isn't loaded yet
-    (function () {
-      const y = document.getElementById('currentYear');
-      if (y) y.textContent = new Date().getFullYear();
-      const lm = document.getElementById('lastModified');
-      if (lm) {
-        const raw = document.lastModified || '';
-        if (raw) {
-          try { lm.textContent = new Date(raw).toLocaleString(); }
-          catch { lm.textContent = raw; }
-        } else {
-          lm.textContent = '—';
-        }
-      }
-    })();
-  </script>
 </body>
 </html>
